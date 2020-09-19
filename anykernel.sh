@@ -11,11 +11,9 @@ do.systemless=0
 do.cleanup=1
 do.cleanuponabort=1
 device.name1=rolex
-device.name2=redmi4a
-device.name3=riva
-device.name4=redmi5a
-device.name5=ugglite
-device.name6=redminote5alite
+device.name2=riva
+device.name3=ugglite
+device.name4=whyred
 supported.versions=
 supported.patchlevels=
 '; } # end properties
