@@ -4,18 +4,22 @@
 ## AnyKernel setup
 # begin properties
 properties() { '
-kernel.string=Welcome to the new world!
+kernel.string=Hoi Bro!
 do.devicecheck=1
 do.modules=0
+do.systemless=0
 do.cleanup=1
-do.cleanuponabort=0
-device.name1=citrus
-device.name2=lime
-device.name3=lavender
+do.cleanuponabort=1
+device.name1=rolex
+device.name2=riva
+device.name3=ugglite
+device.name4=whyred
+supported.versions=
+supported.patchlevels=
 '; } # end properties
 
 # shell variables
-block=/dev/block/bootdevice/by-name/boot;
+block=auto;
 is_slot_device=auto;
 ramdisk_compression=auto;
 
@@ -27,17 +31,16 @@ ramdisk_compression=auto;
 
 ## AnyKernel file attributes
 # set permissions/ownership for included ramdisk files
-set_perm_recursive 0 0 750 750 $ramdisk/*;
+set_perm_recursive 0 0 755 644 $ramdisk/*;
+set_perm_recursive 0 0 750 750 $ramdisk/init* $ramdisk/sbin;
+
 
 ## AnyKernel install
 dump_boot;
 
-# Begin Ramdisk Changes
+# begin ramdisk changes
 
-# migrate from /overlay to /overlay.d to enable SAR Magisk
-if [ -d $ramdisk/overlay ]; then
-  rm -rf $ramdisk/overlay;
-fi;
+# end ramdisk changes
 
 write_boot;
 ## end install
