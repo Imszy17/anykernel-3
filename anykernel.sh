@@ -10,10 +10,7 @@ do.modules=0
 do.systemless=0
 do.cleanup=1
 do.cleanuponabort=1
-device.name1=rolex
-device.name2=riva
-device.name3=ugglite
-device.name4=whyred
+device.name1=riva
 supported.versions=
 supported.patchlevels=
 '; } # end properties
